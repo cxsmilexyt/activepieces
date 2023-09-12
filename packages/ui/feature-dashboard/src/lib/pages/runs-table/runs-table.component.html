@@ -1,13 +1,13 @@
 <div class="ap-w-full ap-h-full ap-px-[30px] ap-pt-[50px]">
   <div class="ap-h-full">
-    <app-page-title title="Runs"></app-page-title>
+    <app-page-title title="记录"></app-page-title>
     <mat-form-field>
-      <mat-label>Filter by status</mat-label>
+      <mat-label>按状态过滤</mat-label>
       <mat-select [formControl]="selectedStatus">
-        <mat-option value="null">All</mat-option>
-        <mat-option value="{{ExecutionOutputStatus.RUNNING}}">Running</mat-option>
-        <mat-option value="{{ExecutionOutputStatus.FAILED}}">Failed</mat-option>
-        <mat-option value="{{ExecutionOutputStatus.SUCCEEDED}}">Succeeded</mat-option>
+        <mat-option value="null">所有</mat-option>
+        <mat-option value="{{ExecutionOutputStatus.RUNNING}}">运行中</mat-option>
+        <mat-option value="{{ExecutionOutputStatus.FAILED}}">失败</mat-option>
+        <mat-option value="{{ExecutionOutputStatus.SUCCEEDED}}">成功</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-slide-toggle *ngIf="nonCommunityEdition$ | async" [formControl]="toggleNotificationFormControl"
@@ -17,21 +17,21 @@
     <div class="ap-min-h-[70%]">
       <table mat-table [dataSource]="dataSource" class="ap-w-[100%]" aria-label="Runs">
         <ng-container matColumnDef="flowName">
-          <th mat-header-cell *matHeaderCellDef>Flow</th>
+          <th mat-header-cell *matHeaderCellDef>名称</th>
           <td mat-cell *matCellDef="let run">{{ run.flowDisplayName }}</td>
         </ng-container>
 
         <ng-container matColumnDef="started">
-          <th mat-header-cell *matHeaderCellDef>Started</th>
+          <th mat-header-cell *matHeaderCellDef>开始时间</th>
           <td mat-cell *matCellDef="let run">{{ run.startTime | date: 'short' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="finished">
-          <th mat-header-cell *matHeaderCellDef>Finished</th>
+          <th mat-header-cell *matHeaderCellDef>结束时间</th>
           <td mat-cell *matCellDef="let run">{{ run.finishTime | date: 'short' }}</td>
         </ng-container>
         <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <th mat-header-cell *matHeaderCellDef>状态</th>
           <td mat-cell *matCellDef="let run"><ap-state-icon [status]="run.status"
               [showStatusText]="true"></ap-state-icon>
           </td>
@@ -47,7 +47,7 @@
       </ng-container>
       <ng-container *ngIf="dataSource.data.length===0 && (dataSource.isLoading$ | async) === false">
         <div class="ap-flex ap-items-center ap-justify-center  ap-h-full ap-h-[500px]">
-          No runs instantiated yet
+          当前无运行的流程
         </div>
       </ng-container>
     </div>

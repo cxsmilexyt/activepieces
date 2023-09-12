@@ -1,18 +1,17 @@
-<ap-dialog-title-template>Delete {{data.entityName}}
+<ap-dialog-title-template>删除 {{data.entityName}}
 </ap-dialog-title-template>
 <mat-dialog-content>
   <div class="md:ap-max-w-[500px]">
     <div class="ap-typography-body-1 ap-text-body ap-mb-4" [innerHTML]="data.note">
     </div>
     <div class="ap-typography-body-1 ap-text-body ap-mb-4">
-      Type <b>DELETE</b> and press confirm to continue.
+      输入 <b>DELETE</b> 并确认继续.
     </div>
     <form class="ap-flex ap-flex-col ap-gap-1" [formGroup]="confirmationForm" (submit)="submit()">
       <mat-form-field class="ap-w-full" appearance="outline">
         <input cdkFocusInitial formControlName="confirmation" matInput type="text" placeholder="DELETE"
           class="!ap-uppercase" />
-        <mat-error *ngIf="confirmationForm.controls.confirmation.invalid">Please write the confirmation message
-          correctly</mat-error>
+        <mat-error *ngIf="confirmationForm.controls.confirmation.invalid">请输入正确的确认文字</mat-error>
       </mat-form-field>
     </form>
   </div>
@@ -22,11 +21,11 @@
 <mat-dialog-actions align="end">
   <div class="ap-flex ap-gap-2.5">
     <ap-button btnColor="basic" mat-dialog-close btnSize="default" btnColor="basic" [disabled]="!!deleteOperation$">
-      Cancel
+      取消
     </ap-button>
     <ap-button btnSize="default" type="submit" (click)="submit();" [loading]="!!deleteOperation$"
       btnColor="warn">
-      Confirm
+      确认
     </ap-button>
   </div>
 </mat-dialog-actions>

@@ -37,8 +37,7 @@
             <ap-button btnColor="primary" btnStyle="stroked" btnSize="medium" (buttonClicked)="testStep()"
                 [tooltipText]=" (currentStepValidity$ | async) === false ? 'Please fix the step inputs first' :
                 (isSaving$|async) === false? 'After the step is tested, you will be able to use its sample data in the next steps' : savingMessage"
-                [disabled]="(currentStepValidity$ | async) === false || (isSaving$ | async) === true">Test
-                step</ap-button>
+                [disabled]="(currentStepValidity$ | async) === false || (isSaving$ | async) === true">测试步骤</ap-button>
         </div>
     </div>
 </ng-template>

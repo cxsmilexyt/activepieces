@@ -2,14 +2,14 @@
   <div class="ap-min-h-[35px]">
     <ng-container
       *ngIf="(instanceRunStatus$ | async) !== statusEnum.RUNNING && (shouldHideTestWidget$| async )===false">
-      <div [matTooltip]="(isTriggerTested$ | async) === false ? 'Test trigger first' : ''">
+      <div [matTooltip]="(isTriggerTested$ | async) === false ? '优先测试触发器' : ''">
         <div (click)="testFlowButtonClicked(currentFlow)" @fadeIn
           [class.ap-grayscale]="(isTriggerTested$ | async) === false"
           [class.ap-pointer-events-none]="(isSaving$ | async) || (isTriggerTested$ | async) === false"
           [class.ap-cursor-auto]="isSaving$ | async" class="ap-typography-body-2 ap-bg-primary-light ap-rounded-full
          ap-border ap-border-solid ap-border-primary-medium ap-transition-all
           ap-py-1.5 ap-px-2.5 ap-text-primary ap-cursor-pointer hover:ap-border-primary-dark">
-          {{(isSaving$ | async)? 'Saving...': 'Test flow'}}
+          {{(isSaving$ | async)? '保存中...': '测试流程'}}
         </div>
       </div>
     </ng-container>

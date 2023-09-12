@@ -1,4 +1,4 @@
 <mat-slide-toggle [formControl]="toggleFormControl" color="primary"
-    [matTooltip]="toggleFormControl.value? 'Published version is on':'Published version is off'"></mat-slide-toggle>
+    [matTooltip]="toggleFormControl.value? '版本发布记录开启':'版本发布记录关闭'"></mat-slide-toggle>
 
 <ng-container *ngIf="instanceStateChanged$ |async "></ng-container>

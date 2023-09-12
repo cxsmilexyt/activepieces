@@ -1,8 +1,8 @@
-<ap-dialog-title-template>Delete {{stepName}}
+<ap-dialog-title-template>删除 {{stepName}}
 </ap-dialog-title-template>
 <mat-dialog-content>
     <div class="ap-typography-body-1 ap-text-description ap-mb-4">
-        Are you sure you want to delete {{stepName}}?
+        确认删除节点 {{stepName}}?
     </div>
 
 </mat-dialog-content>
@@ -10,10 +10,10 @@
 <mat-dialog-actions align="end">
     <div class="ap-flex ap-gap-2.5">
         <ap-button btnColor="basic" mat-dialog-close btnSize="default">
-            Cancel
+            取消
         </ap-button>
         <ap-button cdkFocusInitial btnSize="default" (click)="deleteStep()" btnColor="warn" type="submit">
-            Confirm
+            确认
         </ap-button>
     </div>
 </mat-dialog-actions>

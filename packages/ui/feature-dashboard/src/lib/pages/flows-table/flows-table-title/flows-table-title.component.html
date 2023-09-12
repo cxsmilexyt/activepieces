@@ -2,8 +2,8 @@
     <ng-container *ngIf="showAllFlows$|async;else folderTemplate">
         <div class="ap-flex-grow ap-typography-headline-6 ap-flex ap-gap-2 ap-items-center"><svg-icon
                 src="assets/img/custom/all-flows.svg" class="ap-h-[15px] ap-w-[15px] ap-fill-bleached-gray"
-                [applyClass]="true"></svg-icon> All
-            flows</div>
+                [applyClass]="true"></svg-icon> 所有流程
+        </div>
 
     </ng-container>
     <ng-template #folderTemplate>
@@ -16,11 +16,11 @@
         <ng-template #uncategorizedTemplate>
             <div class="ap-flex-grow ap-typography-headline-6 ap-flex ap-gap-2 ap-items-center"><svg-icon
                     src="assets/img/custom/uncategorized-folder.svg"
-                    class="ap-h-[15px] ap-w-[15px] ap-fill-bleached-gray" [applyClass]="true"></svg-icon>Uncategorized
+                    class="ap-h-[15px] ap-w-[15px] ap-fill-bleached-gray" [applyClass]="true"></svg-icon>未分组
             </div>
         </ng-template>
     </ng-template>
-    <ap-button btnColor="primary" btnSize="medium" [loading]="creatingFlow" (buttonClicked)="createFlow()"> + New Flow</ap-button>
+    <ap-button btnColor="primary" btnSize="medium" [loading]="creatingFlow" (buttonClicked)="createFlow()">新建</ap-button>
 </div>
 
 <ng-container *ngIf="createFlow$ | async"></ng-container>

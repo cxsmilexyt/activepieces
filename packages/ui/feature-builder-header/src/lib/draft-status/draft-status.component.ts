@@ -33,9 +33,9 @@ export class DraftStatusComponent {
     }).pipe(
       map((res) => {
         if (res.isCurrentVersionPublished || res.isInPublishedVersionView) {
-          return 'Published';
+          return '已发布';
         }
-        return 'Draft';
+        return '草稿';
       })
     );
   }

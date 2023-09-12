@@ -1,8 +1,8 @@
-<ap-dialog-title-template>New Folder
+<ap-dialog-title-template>新建分组
 </ap-dialog-title-template>
 <mat-dialog-content>
     <div class="ap-typography-body-1 ap-text-body ap-mb-4 md:ap-w-[500px]">
-        Name your new folder
+        分组名称
     </div>
     <form class="ap-flex ap-flex-col ap-gap-1" [formGroup]="folderForm" (submit)="createFolder()">
         <mat-form-field class="ap-w-full" appearance="outline">
@@ -19,10 +19,10 @@
 <mat-dialog-actions align="end">
     <div class="ap-flex ap-gap-2.5">
         <ap-button btnColor="basic" mat-dialog-close btnSize="default" btnColor="basic" [disabled]="loading">
-            Cancel
+            取消
         </ap-button>
         <ap-button btnSize="default" type="submit" (click)="createFolder();" [loading]="loading" btnColor="primary">
-            Create
+            创建
         </ap-button>
     </div>
 </mat-dialog-actions>

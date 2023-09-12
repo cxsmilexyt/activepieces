@@ -1,5 +1,5 @@
 <ap-dialog-title-template>
-    Import Flow
+    导入流程
 </ap-dialog-title-template>
 
 <mat-dialog-content>
@@ -15,11 +15,11 @@
 <mat-dialog-actions align="end">
     <div class="ap-flex ap-gap-2.5">
         <ap-button btnColor="basic" mat-dialog-close btnSize="default" btnColor="basic">
-            Cancel
+            取消
         </ap-button>
         <ap-button [loading]="loading" [disabled]="!fileControl.valid" (buttonClicked)="importFlow()" btnColor="success"
             btnSize="default">
-            Import
+            导入
         </ap-button>
     </div>
 </mat-dialog-actions>

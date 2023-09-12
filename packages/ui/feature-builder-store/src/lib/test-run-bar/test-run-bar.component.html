@@ -36,7 +36,7 @@
   </ng-container>
   <ng-template #InitialisingRunTemplate> Initialising run...</ng-template>
   <ap-button [hidden]="hideExit$ | async" btnColor="basic" btnStyle="basic" btnSize="medium"
-    (buttonClicked)="exitButtonClicked.next()"> Exit Run </ap-button>
+    (buttonClicked)="exitButtonClicked.next()"> 取消执行 </ap-button>
 </div>
 
 <ng-container *ngIf="exitRun$|async"></ng-container>

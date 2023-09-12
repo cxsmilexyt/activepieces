@@ -1,9 +1,9 @@
 <div class="ap-flex ap-items-center ap-mb-[30px]">
-    <div class="ap-flex-grow">Folders </div>
+    <div class="ap-flex-grow">分组 </div>
     <ap-icon-button extraClasses="ap-fill-body" iconFilename="sort.svg" [width]="18"
         [tooltipText]="(sortFolders$ | async) === 'asc' ? 'Ascending':'Descending'"
         (buttonClicked)="toggleFolderSorting()" [height]="18"></ap-icon-button>
-    <ap-icon-button extraClasses="ap-fill-body" iconFilename="add.svg" [width]="14" tooltipText="New Folder"
+    <ap-icon-button extraClasses="ap-fill-body" iconFilename="add.svg" [width]="14" tooltipText="新建分组"
         (buttonClicked)="createFolder()" [height]="14"></ap-icon-button>
 </div>
 <div class=" ap-overflow-scroll folders-list">
@@ -12,7 +12,7 @@
         <svg-icon src="assets/img/custom/all-flows.svg"
             class="ap-h-[15px] ap-w-[15px] ap-fill-bleached-gray  folder-icon" [applyClass]="true"></svg-icon>
         <div class="ap-body-1 ap-flex-grow">
-            All flows
+            所有分组
         </div>
         <div class="ap-typography-body-1 ap-text-description">
             {{allFlowsNumber$ | async}}
@@ -25,7 +25,7 @@
             class="ap-h-[15px] ap-w-[15px] ap-fill-bleached-gray hover:ap-fill-title  folder-icon"
             [applyClass]="true"></svg-icon>
         <div class="ap-body-1 ap-flex-grow">
-            Uncategorized
+            未分组
         </div>
         <div class="ap-typography-body-1 ap-text-description">
             {{uncategorizedFlowsNumber$ | async}}

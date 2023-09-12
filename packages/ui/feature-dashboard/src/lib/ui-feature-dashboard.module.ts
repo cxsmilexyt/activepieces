@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
+import localezh from '@angular/common/locales/zh-Hans';
 import { DashboardContainerComponent } from './dashboard-container.component';
 import { UiCommonModule } from '@activepieces/ui/common';
 import { SidenavRoutesListComponent } from './components/sidenav-routes-list/sidenav-routes-list.component';
@@ -49,5 +50,8 @@ import { InstallCommunityPieceModalComponent } from './pages/community-pieces-ta
     MoveFlowToFolderDialogComponent,
     RenameFolderDialogComponent,
   ],
+  providers: [{ provide: LOCALE_ID, useValue: 'zh-Hans' }],
 })
 export class UiFeatureDashboardModule {}
+
+registerLocaleData(localezh);

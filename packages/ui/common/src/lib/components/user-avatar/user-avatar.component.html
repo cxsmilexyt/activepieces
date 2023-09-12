@@ -5,18 +5,18 @@
     </div>
 </div>
 <mat-menu #menu="matMenu">
-    <div mat-menu-item (click)="showWhatIsNew()" *ngIf="environment.activateBeamer">
+    <!--<div mat-menu-item (click)="showWhatIsNew()" *ngIf="environment.activateBeamer">
         What's new
     </div>
     <div mat-menu-item (click)="goToCommunity()">
         <div class="ap-flex ap-items-center ap-w-[214px]">Discord <div class="ap-flex-grow"></div><svg-icon
                 src="assets/img/custom/external-link.svg" class="ap-h-[16px] ap-w-[16px] ap-fill-[#989898]"></svg-icon>
         </div>
-    </div>
+    </div>-->
     <div mat-menu-item (click)="goToDeveloperPage()">
-        <div>My Pieces</div>
+        <div>我的业务组件</div>
     </div>
     <div mat-menu-item (click)="logout()">
-        <div class="ap-text-danger">Logout</div>
+        <div class="ap-text-danger">注销</div>
     </div>
 </mat-menu>

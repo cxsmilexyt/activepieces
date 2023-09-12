@@ -195,12 +195,12 @@ export class FlowsTableComponent implements OnInit {
     const trigger = flow.version.trigger;
     switch (trigger.type) {
       case TriggerType.WEBHOOK:
-        return 'Real time flow';
+        return '实时流';
       case TriggerType.PIECE: {
         const cronExpression = flow.schedule?.cronExpression;
         return cronExpression
           ? `Runs ${cronstrue.toString(cronExpression).toLocaleLowerCase()}`
-          : 'Real time flow';
+          : '实时流';
       }
       case TriggerType.EMPTY: {
         console.error(

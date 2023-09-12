@@ -76,26 +76,26 @@ export class PublishButtonComponent implements OnInit {
     }).pipe(
       map((res) => {
         if (res.isShowingPublishedVersion) {
-          return 'Edit';
+          return '编辑';
         }
         if (!res.flowHasSteps) {
-          return 'Add 1 more step to publish';
+          return '添加至少一个节点来发布';
         } else if (res.isCurrentFlowVersionPublished) {
-          return 'Published';
+          return '已发布';
         } else if (res.buttonIsDisabled) {
-          return 'Your flow has invalid steps';
+          return '存在未配置节点';
         }
-        return 'Publish Flow';
+        return '发布';
       })
     );
     this.publishBtnText$ = this.flowState$.pipe(
       map((res) => {
         if (res.isSaving) {
-          return 'Saving';
+          return '保存中';
         } else if (res.isPublishing) {
-          return 'Publishing';
+          return '发布中';
         }
-        return 'Publish';
+        return '发布';
       })
     );
   }

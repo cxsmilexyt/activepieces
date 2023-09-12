@@ -2,7 +2,7 @@
   <div
     class="ap-absolute ap-w-full ap-flex ap-items-center ap-justify-center ap-p-4 ap-pointer-events-none"
   >
-    <svg-icon src="assets/img/custom/logo/full-logo-small.svg"> </svg-icon>
+    <!--<svg-icon src="assets/img/custom/logo/full-logo-small.svg"> </svg-icon>-->
   </div>
 
   <div class="ap-text-center ap-flex ap-items-center ap-justify-center"></div>
@@ -65,7 +65,7 @@
               class="ap-fill-body ap-w-[20px] ap-h-[20px]"
             >
             </svg-icon>
-            <span class="ap-text-body">Rename</span>
+            <span class="ap-text-body">重命名</span>
           </div>
         </button>
         <button
@@ -79,7 +79,7 @@
               class="ap-w-[20px] ap-h-[20px]"
               [applyClass]="true"
             ></svg-icon>
-            <span>Duplicate</span>
+            <span>复制</span>
           </div>
         </button>
         <button mat-menu-item *ngIf="flow$ | async as flow" (click)="import()">
@@ -89,7 +89,7 @@
               class="ap-w-[20px] ap-h-[20px]"
               [applyClass]="true"
             ></svg-icon>
-            <span>Import</span>
+            <span>导入</span>
           </div>
         </button>
         <button
@@ -103,7 +103,7 @@
               class="ap-w-[20px] ap-h-[20px]"
               [applyClass]="true"
             ></svg-icon>
-            <span>Export</span>
+            <span>导出</span>
           </div>
         </button>
         <button
@@ -117,7 +117,7 @@
               class="ap-fill-danger ap-w-[20px] ap-h-[20px]"
               [applyClass]="true"
             ></svg-icon>
-            <span class="ap-text-danger">Delete</span>
+            <span class="ap-text-danger">删除</span>
           </div>
         </button>
       </mat-menu>

@@ -1,15 +1,15 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/v1',
+  apiUrl: 'http://192.168.2.21:3000/v1',
   jwtTokenName: 'token',
-  redirectUrl: 'http://localhost:4200/redirect',
+  redirectUrl: 'http://192.168.2.21:4200/redirect',
   userPropertyNameInLocalStorage: 'currentUser',
   //You need to edit index.html manually
   activateBeamer: true,
-  showFeedbackButton: true,
-  showDocsButton: true,
+  showFeedbackButton: false,
+  showDocsButton: false,
   showUserProfile: true,
-  websiteTitle: 'Activepieces',
+  websiteTitle: '业务宇宙',
   // BEGIN EE
   firebase: {
     apiKey: 'AIzaSyBik7RRZ6S8QIpG4GqzwoF_SCNn3Dr9PPw',

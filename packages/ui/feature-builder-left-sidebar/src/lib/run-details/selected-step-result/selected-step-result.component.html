@@ -19,12 +19,12 @@
   <div class="ap-flex ap-flex-col ap-gap-2">
     <div class="detail-item ap-flex ap-items-center">
       <svg-icon src="assets/img/custom/duration.svg" [svgStyle]="{ width: '12px', height: '20px' }"></svg-icon>
-      Duration:
+      执行时间:
       <span class="description"> {{ selectedStepResult.duration }}ms </span>
     </div>
-    <ap-json-viewer class="json-viewer" title="Input" [maxHeight]="400" [content]="selectedStepResult.input"
+    <ap-json-viewer class="json-viewer" title="输入" [maxHeight]="400" [content]="selectedStepResult.input"
       [isInput]="true"></ap-json-viewer>
-    <ap-json-viewer title="Output"
+    <ap-json-viewer title="输出"
       [content]="selectedStepResult.errorMessage ?? selectedStepResult.output"></ap-json-viewer>
   </div>
 </div>
