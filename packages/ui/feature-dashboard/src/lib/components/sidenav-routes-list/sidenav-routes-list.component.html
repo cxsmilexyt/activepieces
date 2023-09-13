@@ -1,6 +1,6 @@
 <div
   class="ap-w-[75px] ap-bg-transparent ap-h-full ap-flex ap-flex-col ap-typegraphy-body-2 ap-items-center ap-gap-[20px] ap-p-3">
-  <ap-icon-button class="ap-mb-[10px]" [useSvgDefault]="true" [iconFilename]="'logo/logo.svg'" [tooltipText]="'Home'"
+  <ap-icon-button class="ap-mb-[10px]" [useSvgDefault]="true" [iconFilename]="'logo/logo.svg'" [tooltipText]="'主页'"
     (buttonClicked)="redirectHome(false)" (auxclick)="redirectHome(true)"></ap-icon-button>
 
   <div *ngFor="let r of sideNavRoutes" [matTooltip]="r.caption" [matTooltipPosition]="'right'"

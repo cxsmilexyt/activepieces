@@ -30,7 +30,8 @@ export const flagService = {
         const created = now
         const updated = now
         const currentVersion = (await this.getCurrentVersion())
-        const latestVersion = (await this.getLatestPackageDotJson()).version
+        //const latestVersion = (await this.getLatestPackageDotJson()).version
+        const latestVersion = '0.8.0'
         flags.push(
             {
                 id: ApFlagId.ENVIRONMENT,

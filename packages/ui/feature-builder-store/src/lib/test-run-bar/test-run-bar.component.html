@@ -4,37 +4,36 @@
       [showStatusText]="false"></ap-state-icon>
     <ng-container [ngSwitch]="selectedRun.status">
       <ng-container *ngSwitchCase="instanceRunStatus.SUCCEEDED">
-        <span class="ap-text-white">Run succeeded ({{ selectedRun.id }})</span>
+        <span class="ap-text-white">执行成功 ({{ selectedRun.id }})</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.STOPPED">
-        <span class="ap-text-white">Run succeeded ({{ selectedRun.id }})</span>
+        <span class="ap-text-white">执行终止 ({{ selectedRun.id }})</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.FAILED">
-        <span class="ap-text-white">Run failed ({{ selectedRun.id }})</span>
+        <span class="ap-text-white">执行失败 ({{ selectedRun.id }})</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.RUNNING">
-        <span class="ap-text-white">Flow is running</span>
+        <span class="ap-text-white">正在执行</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.PAUSED">
-        <span class="ap-text-white">Flow is paused ...</span>
+        <span class="ap-text-white">已暂停 ...</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.TIMEOUT">
-        <span class="ap-text-white">Run exceeded {{sandboxTimeoutSeconds$ | async}} seconds, try to optimize your
-          steps.</span>
+        <span class="ap-text-white">已达到最大超时时间 {{sandboxTimeoutSeconds$ | async}} 秒, 请优化节点执行效率</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
       <ng-container *ngSwitchCase="instanceRunStatus.INTERNAL_ERROR">
-        <span class="ap-text-white">Run failed for an unknown reason, contact support.</span>
+        <span class="ap-text-white">执行遇到不可知的问题而终止，请重试</span>
         <div class="ap-flex-grow"></div>
       </ng-container>
     </ng-container>
   </ng-container>
-  <ng-template #InitialisingRunTemplate> Initialising run...</ng-template>
+  <ng-template #InitialisingRunTemplate> 初始化...</ng-template>
   <ap-button [hidden]="hideExit$ | async" btnColor="basic" btnStyle="basic" btnSize="medium"
     (buttonClicked)="exitButtonClicked.next()"> 取消执行 </ap-button>
 </div>
